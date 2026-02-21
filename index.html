@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página Personal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        nav {
+            background: #111827;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 3px solid #1e3a8a;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .social-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .social-buttons a:hover {
+            background: #2563eb;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .gallery div {
+            flex: 1 1 30%;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .download-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #047857;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .download-buttons a:hover {
+            background: #059669;
+        }
+
+        footer {
+            text-align: center;
+            background: #111827;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        iframe, video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Tu Nombre Completo</h1>
+    <p>Estudiante / Ingeniero / Desarrollador</p>
+</header>
+
+<nav>
+    <a href="#formacion">Formación Académica</a>
+    <a href="#redes">Redes</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#videos">Videos</a>
+    <a href="#descargas">Descargas</a>
+</nav>
+
+<section id="formacion">
+    <h2>🎓 Formación Académica</h2>
+    <div class="card">
+        <h3>Licenciatura en Ingeniería en Sistemas</h3>
+        <p>Universidad XYZ (2021 - 2025)</p>
+    </div>
+
+    <div class="card">
+        <h3>Certificación en Ciberseguridad</h3>
+        <p>Institución ABC (2024)</p>
+    </div>
+</section>
+
+<section id="redes">
+    <h2>🌐 Redes Sociales</h2>
+    <div class="social-buttons">
+        <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a>
+    </div>
+</section>
+
+<section id="hobbies">
+    <h2>🎯 Hobbies</h2>
+    <div class="gallery">
+        <div>
+            <img src="img/hobby1.jpg" alt="Hobby 1">
+            <p>Fotografía de paisajes.</p>
+        </div>
+
+        <div>
+            <img src="img/hobby2.jpg" alt="Hobby 2">
+            <p>Programación de proyectos personales.</p>
+        </div>
+
+        <div>
+            <img src="img/hobby3.jpg" alt="Hobby 3">
+            <p>Practicar deporte al aire libre.</p>
+        </div>
+    </div>
+</section>
+
+<section id="videos">
+    <h2>🎬 Videos</h2>
+
+    <h3>Video 1 (YouTube)</h3>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+            frameborder="0" allowfullscreen></iframe>
+
+    <h3>Video 2 (YouTube)</h3>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+            frameborder="0" allowfullscreen></iframe>
+
+    <h3>Video 3 (archivo local)</h3>
+    <video controls>
+        <source src="videos/mi_video.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+</section>
+
+<section id="descargas">
+    <h2>📥 Descargas</h2>
+    <div class="download-buttons">
+        <a href="docs/CV.pdf" download>Descargar CV</a>
+        <a href="docs/llave_publica.asc" download>Descargar Llave Pública</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Tu Nombre | Página personal en GitHub</p>
+</footer>
+
+</body>
+</html>
