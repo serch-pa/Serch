@@ -2,26 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>STC</title>
+    <title>Mi Página Personal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <style>
+        :root {
+            --bg: #f4f4f4;
+            --text: #333;
+            --primary: #1e3a8a;
+            --secondary: #111827;
+            --card: #ffffff;
+            --button: #1e3a8a;
+            --button-hover: #2563eb;
+            --download: #047857;
+            --download-hover: #059669;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --text: #f1f5f9;
+                --primary: #2563eb;
+                --secondary: #020617;
+                --card: #1e293b;
+                --button: #2563eb;
+                --button-hover: #3b82f6;
+                --download: #059669;
+                --download-hover: #10b981;
+            }
+        }
+        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
         }
 
         header {
-            background: #1e3a8a;
+            background: var(--primary);
             color: white;
             text-align: center;
             padding: 40px 20px;
         }
 
         nav {
-            background: #111827;
+            background: var(--secondary);
             text-align: center;
             padding: 10px;
         }
@@ -34,7 +61,7 @@
         }
 
         nav a:hover {
-            color: #60a5fa;
+            opacity: 0.7;
         }
 
         section {
@@ -44,30 +71,31 @@
         }
 
         h2 {
-            border-bottom: 3px solid #1e3a8a;
+            border-bottom: 3px solid var(--primary);
             padding-bottom: 10px;
         }
 
         .card {
-            background: white;
+            background: var(--card);
             padding: 20px;
             margin: 15px 0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s;
         }
 
         .social-buttons a {
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
-            background: #1e3a8a;
+            background: var(--button);
             color: white;
             border-radius: 5px;
             text-decoration: none;
         }
 
         .social-buttons a:hover {
-            background: #2563eb;
+            background: var(--button-hover);
         }
 
         .gallery {
@@ -90,22 +118,14 @@
             display: inline-block;
             margin: 10px;
             padding: 12px 25px;
-            background: #047857;
+            background: var(--download);
             color: white;
             border-radius: 5px;
             text-decoration: none;
         }
 
         .download-buttons a:hover {
-            background: #059669;
-        }
-
-        footer {
-            text-align: center;
-            background: #111827;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
+            background: var(--download-hover);
         }
 
         iframe, video {
@@ -113,6 +133,14 @@
             max-width: 600px;
             border-radius: 10px;
             margin: 15px 0;
+        }
+
+        footer {
+            text-align: center;
+            background: var(--secondary);
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
         }
 
         @media (max-width: 768px) {
